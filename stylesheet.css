@@ -1,4 +1,16 @@
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(171, 0, 50, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
 .jumbotron {
     background: rgba(171, 0, 50, .8);
-    color: #000000;
+    color: #FFF;
+    margin: 20px 0;
+}
+
+.content {
+    background: #F5F5F5;
+    border: 2px solid #343D52;
+    border-radius: 5px;
 }
