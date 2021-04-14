@@ -1,0 +1,80 @@
+// COLOR VARIABLES
+$color-primary: #ab0032; // cwu
+$color-2: #b0287c;
+$color-3: #885abc;
+$color-4: #0081de;
+
+$color-dark-1: #31496d;
+$color-dark-2: #2f4858;
+
+$color-blue-1: #54bac1;
+
+$color-white: #fff;
+
+// FONT VARIABLES
+$font-primary: 'Open Sans', sans-serif;
+
+// BREAKPOINTS
+
+// GLOBAL STYLINGS
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  // color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+
+  // Using color 3 and 4
+  background: rgb(0, 129, 222);
+  background: -moz-linear-gradient(
+    60deg,
+    rgba(0, 129, 222, 1) 0%,
+    rgba(136, 90, 188, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    60deg,
+    rgba(0, 129, 222, 1) 0%,
+    rgba(136, 90, 188, 1) 100%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(0, 129, 222, 1) 0%,
+    rgba(136, 90, 188, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0081de",endColorstr="#885abc",GradientType=1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  display: grid;
+  gap: 3rem;
+
+  grid-template-rows: 10vh 60vh 25vh 20vh 40vh;
+  grid-template-columns: [full-start] 20rem [hero-start] 1fr [hero-end] 20rem [full-end];
+}
+
+.sitting {
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: flex-end;
+  transform: translateY(5rem) translateX(1.5rem);
+  img {
+    height: 12rem;
+    width: 12rem;
+  }
+}

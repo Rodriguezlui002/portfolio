@@ -1,0 +1,27 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../img/desk.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+
+  -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
+  box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
+
+  //display: grid;
+  grid-column: hero-start / hero-end;
+  grid-row: 2 / 3;
+  h1 {
+    color: $color-white;
+    font-size: 4.5rem;
+    margin: 5rem 5rem;
+  }
+
+  h3 {
+    color: $color-white;
+    font-size: 3rem;
+    margin-left: 5rem;
+    margin-right: 10rem;
+  }
+}

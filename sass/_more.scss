@@ -1,0 +1,32 @@
+.more {
+  grid-row: 4 / 5;
+  grid-column: hero-start / hero-end;
+  display: grid;
+
+  list-style: none;
+  color: $color-white;
+
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+
+  img {
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    margin-left: 4.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  div {
+    margin-top: 4rem;
+  }
+}
