@@ -4,7 +4,7 @@
 
   h3 {
     font-size: 2.5rem;
-    text-align: center;
+    padding-left: 6rem;
     color: $color-white;
   }
 
@@ -23,5 +23,32 @@
 
   li {
     margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 4 / 5;
+    grid-column: hero-mid-1 / hero-end;
+    padding-bottom: 1rem;
+
+    h3 {
+      font-size: 2.5rem;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    img {
+      height: 15rem;
+      width: 15rem;
+      display: block;
+      margin: 0 auto;
+    }
+
+    ul {
+      text-align: start;
+      column-count: 2;
+    }
+    li {
+      margin-top: 1rem;
+    }
   }
 }

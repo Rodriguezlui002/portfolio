@@ -7,11 +7,94 @@
 
   gap: 3rem;
 
+  div {
+    height: 50vh;
+
+    @media only screen and (max-width: $bp-large) {
+      height: 40vh;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      height: unset;
+      //height: 30rem;
+    }
+  }
+
   &__item {
-    background-color: $color-white;
     -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
     box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
     border-radius: 10px;
     font-size: 5rem;
+    color: $color-white;
+
+    display: grid;
+    grid-row: 1fr 2fr;
+
+    img {
+      width: 65%;
+      justify-self: center;
+      display: block;
+      border-radius: 50%;
+      margin: 1rem 0;
+    }
+
+    h3,
+    a {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 400;
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    a:link,
+    a:visited {
+      font-size: 2.5rem;
+      text-decoration: none;
+      color: $color-white;
+    }
+
+    a:hover,
+    a:active {
+      color: $color-dark-1;
+    }
+
+    &--1 {
+      background-color: $color-4;
+    }
+
+    &--2 {
+      background-color: $color-5;
+    }
+
+    &--3 {
+      background-color: $color-6;
+    }
+
+    &--text {
+      background-color: $color-white;
+      color: $color-dark-1;
+      font-size: 2rem;
+      padding: 2rem 2rem;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      img {
+        width: 25%;
+        border-radius: 50%;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 6 / 7;
+    grid-column: hero-start / hero-end;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
   }
 }

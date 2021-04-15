@@ -21,4 +21,14 @@
     text-align: center;
     list-style: none;
   }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 4 / 5;
+    grid-column: hero-start / hero-mid-1;
+    margin-left: 0;
+
+    li {
+      font-size: 2rem;
+    }
+  }
 }

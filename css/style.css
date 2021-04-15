@@ -9,6 +9,15 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 40.625em) {
+    html {
+      font-size: 45%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -25,8 +34,16 @@ body {
 .container {
   display: grid;
   gap: 3rem;
-  grid-template-rows: 10vh 60vh 25vh 20vh 40vh;
+  grid-template-rows: 10vh 60vh 25vh 20vh 50vh 10vh;
   grid-template-columns: [full-start] 20rem [hero-start] 1fr [hero-end] 20rem [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 10vh 45vh 25vh 45vh 20vh 40vh 10vh;
+      grid-template-columns: [full-start] 10rem [hero-start] 1fr [hero-mid-1] 1fr [hero-end] 10rem [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 10vh 45vh 25vh 45vh 20vh 120vh 10vh;
+      grid-template-columns: [full-start] 3rem [hero-start] 1fr [hero-mid-1] 1fr [hero-end] 3rem [full-end]; } }
 
 .sitting {
   grid-row: 2 / 3;
@@ -36,6 +53,17 @@ body {
   .sitting img {
     height: 12rem;
     width: 12rem; }
+  @media only screen and (max-width: 62.5em) {
+    .sitting {
+      grid-row: 4 / 5;
+      grid-column: hero-start / hero-mid-1;
+      justify-self: start;
+      align-self: flex-start;
+      transform: translateY(3rem) translateX(-4rem); } }
+  @media only screen and (max-width: 40.625em) {
+    .sitting img {
+      height: 10rem;
+      width: 10rem; } }
 
 .about {
   background-color: #fff;
@@ -56,12 +84,14 @@ body {
     position: relative;
     overflow: hidden;
     display: block;
+    margin-left: 2rem;
     justify-self: center;
     align-self: center; }
   .about__text {
     color: #2f4858;
     margin-top: 3.5rem;
-    text-align: start; }
+    text-align: start;
+    padding: 0 2rem; }
 
 .course {
   grid-row: 3 / 5;
@@ -80,6 +110,13 @@ body {
     margin-top: 3.25rem;
     text-align: center;
     list-style: none; }
+  @media only screen and (max-width: 62.5em) {
+    .course {
+      grid-row: 4 / 5;
+      grid-column: hero-start / hero-mid-1;
+      margin-left: 0; }
+      .course li {
+        font-size: 2rem; } }
 
 .header {
   background: #54bac1;
@@ -142,7 +179,7 @@ body {
   grid-column: hero-end / full-end; }
   .skills h3 {
     font-size: 2.5rem;
-    text-align: center;
+    padding-left: 6rem;
     color: #fff; }
   .skills img {
     height: 20rem;
@@ -155,6 +192,25 @@ body {
     margin-left: 3.5rem; }
   .skills li {
     margin-top: 3rem; }
+  @media only screen and (max-width: 62.5em) {
+    .skills {
+      grid-row: 4 / 5;
+      grid-column: hero-mid-1 / hero-end;
+      padding-bottom: 1rem; }
+      .skills h3 {
+        font-size: 2.5rem;
+        padding-left: 0;
+        text-align: center; }
+      .skills img {
+        height: 15rem;
+        width: 15rem;
+        display: block;
+        margin: 0 auto; }
+      .skills ul {
+        text-align: start;
+        column-count: 2; }
+      .skills li {
+        margin-top: 1rem; } }
 
 .about {
   background-color: #fff;
@@ -175,12 +231,14 @@ body {
     position: relative;
     overflow: hidden;
     display: block;
+    margin-left: 2rem;
     justify-self: center;
     align-self: center; }
   .about__text {
     color: #2f4858;
     margin-top: 3.5rem;
-    text-align: start; }
+    text-align: start;
+    padding: 0 2rem; }
 
 .projects {
   grid-row: 5 / 6;
@@ -188,12 +246,68 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem; }
+  .projects div {
+    height: 50vh; }
+    @media only screen and (max-width: 62.5em) {
+      .projects div {
+        height: 40vh; } }
+    @media only screen and (max-width: 50em) {
+      .projects div {
+        height: unset; } }
   .projects__item {
-    background-color: #fff;
     -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
     box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
     border-radius: 10px;
-    font-size: 5rem; }
+    font-size: 5rem;
+    color: #fff;
+    display: grid;
+    grid-row: 1fr 2fr; }
+    .projects__item img {
+      width: 65%;
+      justify-self: center;
+      display: block;
+      border-radius: 50%;
+      margin: 1rem 0; }
+    .projects__item h3,
+    .projects__item a {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none; }
+    .projects__item a:link,
+    .projects__item a:visited {
+      font-size: 2.5rem;
+      text-decoration: none;
+      color: #fff; }
+    .projects__item a:hover,
+    .projects__item a:active {
+      color: #31496d; }
+    .projects__item--1 {
+      background-color: #0081de; }
+    .projects__item--2 {
+      background-color: #009ddd; }
+    .projects__item--3 {
+      background-color: #00b2c0; }
+    .projects__item--text {
+      background-color: #fff;
+      color: #31496d;
+      font-size: 2rem;
+      padding: 2rem 2rem;
+      text-align: center; }
+    @media only screen and (max-width: 50em) {
+      .projects__item img {
+        width: 25%;
+        border-radius: 50%;
+        margin: 1rem 0; } }
+  @media only screen and (max-width: 62.5em) {
+    .projects {
+      grid-row: 6 / 7;
+      grid-column: hero-start / hero-end; } }
+  @media only screen and (max-width: 50em) {
+    .projects {
+      grid-template-columns: none;
+      grid-template-rows: repeat(3, 1fr); } }
 
 .more {
   grid-row: 4 / 5;
@@ -211,10 +325,46 @@ body {
   .more h3 {
     font-size: 3rem;
     font-weight: 400; }
+  .more ul {
+    text-align: start; }
   .more li {
     display: inline-block;
-    padding: 0 2rem;
+    padding-right: 1.5rem;
     font-size: 2rem;
     letter-spacing: 2px; }
   .more div {
     margin-top: 4rem; }
+  @media only screen and (max-width: 62.5em) {
+    .more {
+      grid-row: 5 / 6;
+      grid-column: hero-start / hero-end; } }
+
+.footer {
+  grid-row: 6 / -1;
+  grid-column: full-start / full-end;
+  background: #54bac1;
+  background: -moz-linear-gradient(60deg, #54bac1 35%, #befcff 100%);
+  background: -webkit-linear-gradient(60deg, #54bac1 35%, #befcff 100%);
+  background: linear-gradient(60deg, #54bac1 35%, #befcff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#54bac1",endColorstr="#befcff",GradientType=1);
+  text-align: center;
+  padding: 2rem; }
+  .footer span {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff; }
+    .footer span a {
+      text-decoration: none; }
+    .footer span a:link,
+    .footer span a:visited {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #fff; }
+    .footer span a:hover,
+    .footer span a:active {
+      color: #31496d; }
+  @media only screen and (max-width: 62.5em) {
+    .footer {
+      grid-row: 7 / -1;
+      grid-column: full-start / full-end;
+      padding-top: 3.5rem; } }

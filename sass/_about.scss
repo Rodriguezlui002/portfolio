@@ -21,6 +21,7 @@
     position: relative;
     overflow: hidden;
     display: block;
+    margin-left: 2rem;
 
     justify-self: center;
     align-self: center;
@@ -30,5 +31,6 @@
     color: $color-dark-2;
     margin-top: 3.5rem;
     text-align: start;
+    padding: 0 2rem;
   }
 }

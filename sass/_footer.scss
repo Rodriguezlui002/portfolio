@@ -1,0 +1,52 @@
+.footer {
+  grid-row: 6 / -1;
+  grid-column: full-start / full-end;
+  background: rgb(84, 186, 193);
+  background: -moz-linear-gradient(
+    60deg,
+    rgba(84, 186, 193, 1) 35%,
+    rgba(190, 252, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    60deg,
+    rgba(84, 186, 193, 1) 35%,
+    rgba(190, 252, 255, 1) 100%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(84, 186, 193, 1) 35%,
+    rgba(190, 252, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#54bac1",endColorstr="#befcff",GradientType=1);
+
+  text-align: center;
+  padding: 2rem;
+
+  span {
+    font-size: 2rem;
+    font-weight: 300;
+    color: $color-white;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link,
+    a:visited {
+      font-size: 2rem;
+      text-decoration: none;
+      color: $color-white;
+    }
+
+    a:hover,
+    a:active {
+      color: $color-dark-1;
+    }
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 7 / -1;
+    grid-column: full-start / full-end;
+    padding-top: 3.5rem;
+  }
+}
