@@ -51,4 +51,29 @@
       margin-top: 1rem;
     }
   }
+
+  @media only screen and (max-width: $bp-small) {
+    ul {
+      text-align: center;
+      column-count: 1;
+    }
+  }
+
+  @media only screen and (max-width: $bp-xsmall) {
+    ul {
+      font-size: 3rem;
+    }
+    li {
+      margin-top: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-mobile-l) {
+    ul {
+      font-size: 2.5rem;
+    }
+    li {
+      margin-top: 1.5rem;
+    }
+  }
 }

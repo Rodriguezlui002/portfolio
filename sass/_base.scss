@@ -21,6 +21,10 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 $bp-small: 40.625em; // 650px
+$bp-xsmall: 33.125em; // 530px
+$bp-xxsmall: 29.0625em; // 465px
+$bp-mobile-l: 26.5625em; // 425px
+$bp-mobile-m: 22.8125em; // 365px
 
 // GLOBAL STYLINGS
 
@@ -47,6 +51,10 @@ html {
 
   @media only screen and (max-width: $bp-small) {
     font-size: 45%;
+  }
+
+  @media only screen and (max-width: $bp-xsmall) {
+    font-size: 40%;
   }
 }
 
@@ -91,7 +99,7 @@ body {
   }
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 10vh 45vh 25vh 45vh 20vh 120vh 10vh;
+    grid-template-rows: 10vh 45vh max-content 45vh 20vh 120vh 10vh;
     grid-template-columns: [full-start] 3rem [hero-start] 1fr [hero-mid-1] 1fr [hero-end] 3rem [full-end];
   }
 }
@@ -119,5 +127,15 @@ body {
       height: 10rem;
       width: 10rem;
     }
+  }
+
+  @media only screen and (max-width: $bp-xxsmall) {
+    justify-self: center;
+    align-self: flex-end;
+    transform: translateY(0) translateX(0);
+  }
+
+  @media only screen and (max-width: $bp-mobile-l) {
+    transform: translateY(4.5rem);
   }
 }

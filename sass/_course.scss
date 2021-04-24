@@ -1,14 +1,19 @@
 .course {
   grid-row: 3 / 5;
   grid-column: full-start / hero-start;
-  background-color: #009ddd;
+  display: grid;
+  grid-template-rows: min-content;
   margin-left: 3rem;
   border-radius: 5px;
 
   color: $color-white;
 
-  -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
-  box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
+  div {
+    background-color: #009ddd;
+    -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
+    box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
+    border-radius: 5px;
+  }
 
   h3 {
     font-size: 2.5rem;
@@ -28,6 +33,21 @@
     margin-left: 0;
 
     li {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    li {
+      padding-top: 2.75rem;
+      font-size: 2.2rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-mobile-l) {
+    width: 110%;
+    li {
+      padding-top: 1rem;
       font-size: 2rem;
     }
   }

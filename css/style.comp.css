@@ -45,7 +45,7 @@ body {
       grid-template-columns: [full-start] 10rem [hero-start] 1fr [hero-mid-1] 1fr [hero-end] 10rem [full-end]; } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 10vh 45vh max-content 45vh 20vh 120vh 10vh;
+      grid-template-rows: 10vh 45vh 25vh 45vh 20vh 120vh 10vh;
       grid-template-columns: [full-start] 3rem [hero-start] 1fr [hero-mid-1] 1fr [hero-end] 3rem [full-end]; } }
 
 .sitting {
@@ -121,28 +121,17 @@ body {
         text-align: center; } }
   @media only screen and (max-width: 26.5625em) {
     .about {
-      font-size: 2rem; }
-      .about img {
-        width: 15rem;
-        height: 15rem;
-        margin-left: 0; }
-      .about__text {
-        margin-top: 2rem;
-        padding: 0 1rem; } }
+      font-size: 2rem; } }
 
 .course {
   grid-row: 3 / 5;
   grid-column: full-start / hero-start;
-  display: grid;
-  grid-template-rows: min-content;
+  background-color: #009ddd;
   margin-left: 3rem;
   border-radius: 5px;
-  color: #fff; }
-  .course div {
-    background-color: #009ddd;
-    -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
-    box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
-    border-radius: 5px; }
+  color: #fff;
+  -webkit-box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32);
+  box-shadow: 2px 3px 12px 1px rgba(0, 0, 0, 0.32); }
   .course h3 {
     font-size: 2.5rem;
     text-align: center; }
@@ -162,11 +151,11 @@ body {
     .course li {
       padding-top: 2.75rem;
       font-size: 2.2rem; } }
-  @media only screen and (max-width: 26.5625em) {
+  @media only screen and (max-width: 22.8125em) {
     .course {
       width: 110%; }
       .course li {
-        padding-top: 1rem;
+        padding-top: 2.75rem;
         font-size: 2rem; } }
 
 .header {
@@ -274,11 +263,6 @@ body {
       font-size: 3rem; }
     .skills li {
       margin-top: 2rem; } }
-  @media only screen and (max-width: 26.5625em) {
-    .skills ul {
-      font-size: 2.5rem; }
-    .skills li {
-      margin-top: 1.5rem; } }
 
 .about {
   background-color: #fff;
@@ -325,14 +309,7 @@ body {
         text-align: center; } }
   @media only screen and (max-width: 26.5625em) {
     .about {
-      font-size: 2rem; }
-      .about img {
-        width: 15rem;
-        height: 15rem;
-        margin-left: 0; }
-      .about__text {
-        margin-top: 2rem;
-        padding: 0 1rem; } }
+      font-size: 2rem; } }
 
 .projects {
   grid-row: 5 / 6;

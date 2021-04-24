@@ -33,4 +33,40 @@
     text-align: start;
     padding: 0 2rem;
   }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 2.5rem;
+    &__text {
+      margin: 2rem 0;
+    }
+  }
+
+  @media only screen and (max-width: $bp-xsmall) {
+    background: linear-gradient(0deg, $color-white 64%, transparent 100%);
+    font-size: 2.2rem;
+    grid-column: full-start / full-end;
+    margin: 0 auto;
+    width: 95%;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 2fr;
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: $bp-mobile-l) {
+    font-size: 2rem;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      margin-left: 0;
+    }
+
+    &__text {
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
+  }
 }
